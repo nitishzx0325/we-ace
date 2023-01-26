@@ -1,0 +1,21 @@
+<h2>Happy/Sad Index List</h2>
+<table class="table table-striped">
+  <thead>
+    <th>ID</th>
+    <th>First Question</th>
+    <th>Second Question</th>
+    <th>Third Question</th>
+    <th>Fourth Question</th>
+    <th>Fifth Question</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let temp of index">
+      <td>{{ temp.id }}</td>
+      <td>{{ temp.first }}</td>
+      <td>{{ temp.second }}</td>
+      <td>{{ temp.third }}</td>
+      <td>{{ temp.fourth }}</td>
+      <td>{{ temp.fifth }}</td>
+    </tr>
+  </tbody>
+</table>

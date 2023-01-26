@@ -1,0 +1,98 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Survey of happiness and satisfaction</h3>
+  <form (ngSubmit)="onSubmit(sampleForm)" #sampleForm="ngForm">
+    <div class="form-group">
+      <label>Are you happy in the career </label>
+      <input
+        type="text"
+        class="form-control"
+        id="first"
+        [(ngModel)]="happy.first"
+        name="first"
+      />
+    </div>
+    <div class="form-group">
+      <label>
+        How likely are you to recommend your family or friends working</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="second"
+        [(ngModel)]="happy.second"
+        name="second"
+      />
+    </div>
+    <div class="form-group">
+      <label>From which department are you</label>
+      <input
+        type="text"
+        class="form-control"
+        id="third"
+        [(ngModel)]="happy.third"
+        name="third"
+      />
+    </div>
+    <div class="form-group">
+      <label>Your work experience with the organization?</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fourth"
+        [(ngModel)]="happy.fourth"
+        name="fourth"
+      />
+    </div>
+    <div class="form-group">
+      <label
+        >Is there anything you would like to add to improve happiness of
+        employees at work?</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="fifth"
+        [(ngModel)]="happy.fifth"
+        name="fifth"
+      />
+    </div>
+    <!-- radio button -->
+    <div class="form-group">
+      <label>Select Your Gender</label>
+      <div class="formControl">
+        <label class="inline-radio">
+          <input
+            type="radio"
+            name="gender"
+            value="male"
+            [(ngModel)]="gender"
+          />Male
+        </label>
+        <label class="inline-radio">
+          <input
+            type="radio"
+            name="gender"
+            value="female"
+            [(ngModel)]="gender"
+          />Female
+        </label>
+      </div>
+    </div>
+
+    <!-- checkBox -->
+    <div class="form-group">
+      <label>How your rate US!</label>
+      <select
+        [(ngModel)]="rate"
+        class="form-select form-select-sm"
+        aria-label=".form-select-sm example"
+      >
+        <option *ngFor="let option of options" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </div>
+
+    <button class="btn btn-success" type="submit">Submit</button>
+  </form>
+</div>
